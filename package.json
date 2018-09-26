@@ -1,0 +1,13 @@
+{
+  "name": "swapper",
+  "version": "1.0.0",
+  "description": "A simple JS package to create swappable parts of a webpage. Extremely lightweight.",
+  "main": "index.js",
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Galactic-Cat/swapper.git"
+  },
+  "scripts": {},
+  "author": "Galactic-Cat",
+  "license": "GPL-3.0"
+}

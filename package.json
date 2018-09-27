@@ -1,6 +1,6 @@
 {
   "name": "swapper",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "A simple JS package to create swappable parts of a webpage. Extremely lightweight.",
   "main": "index.js",
   "repository": {

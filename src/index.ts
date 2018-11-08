@@ -1,15 +1,7 @@
 export default class Swapper {
-    /** Internal variable for storing the path to html files. */
     htmlPath: string
-    /** Internal variable for storing the root element for swapper. */
     rootElement: Element
 
-    /**
-     * Constructor.
-     * @param htmlPath path to folder contiaining html files for swapping.
-     * @param rootElement element to swap out contents of.
-     * @param firstSwap optional swap to execute after initialization
-     */
     constructor(htmlPath: string, rootElement: string, firstSwap?: string) {
         if (htmlPath[htmlPath.length - 1] !== '/')
             htmlPath += '/'
@@ -20,10 +12,6 @@ export default class Swapper {
         this.updateTargets()
     }
 
-    /**
-     * Updates target of click eventlisteners.
-     * @param element Optionol element to only update children of.
-     */
     updateTargets(element?: Element) {
         if (element === null || element === undefined)
             element = this.rootElement
@@ -40,11 +28,6 @@ export default class Swapper {
         }
     }
 
-    /**
-     * Swaps contents of root element for specified html file.
-     * @param target Name of html file (must be present in htmlFile directory) (file extension may be omitted)
-     * @param callback Function to call after swap has finished succesfully.
-     */
     swap(target: string, callback?: Function) {
         let targetPath: string
         if (target.indexOf('.html') !== target.length - 6)
@@ -55,7 +38,6 @@ export default class Swapper {
         let xmlhttp = new XMLHttpRequest()
         xmlhttp.overrideMimeType('document/html')
         xmlhttp.open('GET', targetPath)
-        // On load end
         xmlhttp.onloadend = () => {
             if (xmlhttp.status === 200) {
                 this.rootElement.innerHTML = xmlhttp.responseText
@@ -65,7 +47,6 @@ export default class Swapper {
             } else
                 console.warn(`[ Swapper ] Failed to swap to '${target}'. With error: '${xmlhttp.statusText}'.`)
         }
-        // On error
         xmlhttp.onerror = () => {
             console.warn(`[ Swapper ] Failed to swap to '${target}'. With error: '${xmlhttp.statusText}'.`)
         }

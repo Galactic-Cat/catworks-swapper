@@ -1,11 +1,11 @@
-# Swapper
+# Catworks Swapper
 A simple JS package to create swappable parts of a webpage. Extremely lightweight.
 If you're a proffesional JS developer, maybe skip this one, it's undoubetly amateurish, maybe use React?
 
 ## Setting up
 Firstly , import the Swapper class.
 ```javascript
-import Swapper from 'swapper'
+import Swapper from 'catworks-swapper'
 ```
 Then create the element, like you would.
 You'll have to bind it to a DOM element, so:

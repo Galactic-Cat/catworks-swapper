@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
       "type": "git",
-      "url": "git+https://github.com/Galactic-Cat/swapper.git"
+      "url": "git+https://github.com/Galactic-Cat/catworks-swapper.git"
   },
   "scripts": {},
   "author": "Galactic-Cat",

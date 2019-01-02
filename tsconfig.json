@@ -1,6 +1,7 @@
 {
     "files": [
-        "./src/index.ts"
+        "./src/index.ts",
+        "./src/index.d.ts"
     ],
     "compilerOptions": {
         "outDir": ".",

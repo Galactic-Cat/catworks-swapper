@@ -1,6 +1,7 @@
 export default class Swapper {
     htmlPath: string
     rootElement: Element
+    public onswap: Function
 
     constructor(htmlPath: string, rootElement: string, firstSwap?: string) {
         if (htmlPath[htmlPath.length - 1] !== '/')
@@ -44,6 +45,8 @@ export default class Swapper {
                 this.updateTargets()
                 if (callback !== null && callback !== undefined)
                     callback()
+                if (typeof this.onswap === 'function')
+                    this.onswap()
             } else
                 console.warn(`[ Swapper ] Failed to swap to '${target}'. With error: '${xmlhttp.statusText}'.`)
         }

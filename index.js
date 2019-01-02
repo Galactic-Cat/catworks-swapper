@@ -45,6 +45,8 @@ var Swapper = /** @class */ (function () {
                 _this.updateTargets();
                 if (callback !== null && callback !== undefined)
                     callback();
+                if (typeof _this.onswap === 'function')
+                    _this.onswap();
             }
             else
                 console.warn("[ Swapper ] Failed to swap to '" + target + "'. With error: '" + xmlhttp.statusText + "'.");

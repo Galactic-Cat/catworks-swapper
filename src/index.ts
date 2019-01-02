@@ -44,9 +44,9 @@ export default class Swapper {
                 this.rootElement.innerHTML = xmlhttp.responseText
                 this.updateTargets()
                 if (callback !== null && callback !== undefined)
-                    callback()
+                    callback(target)
                 if (typeof this.onswap === 'function')
-                    this.onswap()
+                    this.onswap(target)
             } else
                 console.warn(`[ Swapper ] Failed to swap to '${target}'. With error: '${xmlhttp.statusText}'.`)
         }
